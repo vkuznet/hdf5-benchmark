@@ -51,9 +51,11 @@ echo
 echo "Running SWMR benchmark (single-process reader)..."
 # Use /usr/bin/time -v if available to report resource usage
 if command -v /usr/bin/time >/dev/null 2>&1; then
-  /usr/bin/time -v python3 h5_swmr_bench.py --file "${OUT_FILE}" --sample-reads $SAMPLE_READS --out "${SWMR_OUT}" 2> swmr_time.log || true
+  #/usr/bin/time -v python3 h5_swmr_bench.py --file "${OUT_FILE}" --sample-reads $SAMPLE_READS --out "${SWMR_OUT}" 2> swmr_time.log || true
+  /usr/bin/time -v python3 h5_mpar_bench.py --method=swmr --file "${OUT_FILE}" --sample-reads $SAMPLE_READS --out "${SWMR_OUT}" 2> swmr_time.log || true
 else
-  python3 h5_swmr_bench.py --file "${OUT_FILE}" --sample-reads $SAMPLE_READS --out "${SWMR_OUT}"
+  #python3 h5_swmr_bench.py --file "${OUT_FILE}" --sample-reads $SAMPLE_READS --out "${SWMR_OUT}"
+  python3 h5_mpar_bench.py --method=swmr --file "${OUT_FILE}" --sample-reads $SAMPLE_READS --out "${SWMR_OUT}"
 fi
 
 echo "SWMR results -> ${SWMR_OUT}"
