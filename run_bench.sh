@@ -77,6 +77,6 @@ echo "mpar results -> ${MPAR_OUT}"
 
 echo
 echo "Post-processing: summary prints"
-python3 stats.py --swmr_out=${SWMR_OUT} --par_out=${MPAR_OUT}
+python3 stats.py --swmr=${SWMR_OUT} --par=${MPAR_OUT}
 echo "Done."
 
