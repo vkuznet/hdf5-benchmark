@@ -24,8 +24,9 @@ For instance:
 # generate 2GB file and run swrm vs mpi parallel benchmark with 16 shards split
 ./run_bench.sh --size-gb 2 --file big.h5 --mpirun "-n 16"
 ```
+
 Here is results of using 2GB file:
-```
+
 ```
 Generating HDF5 file: big.h5 (approx 2 GB)
 Generating HDF5 file 'big.h5' target≈2.0 GB (2.0GB)
