@@ -1,0 +1,19 @@
+name: h5mpi
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.11
+  - openmpi
+  - mpi4py
+  - hdf5=*=*openmpi*
+  - h5py=*=*openmpi*
+  - numpy
+  - psutil
+  - tqdm
+  - zarr
+  - pip
+  - pip:
+      - certif-pyspec==1.5.3
+      - chess-scanparsers
